@@ -1,0 +1,12 @@
+extends ../layouts/layout
+
+mixin sectionTitle(title, secondTitle)
+    - secondTitle = secondTitle || ''
+    .section__head
+        .section__title.title.second.txt.white
+            p=title
+        if secondTitle
+            .section__second-title.title.txt.untransformed.third
+                p=secondTitle
+
+block content
